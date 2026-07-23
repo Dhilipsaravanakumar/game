@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Ladder - DSK</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- fonts link -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <!-- favicon links -->
+  <link href="images/favicon.ico" rel="icon" />
+
+</head>
+
+<body class="ladder-page">
+  <a class="back-home" href="index.html">&larr; Home</a>
+
+  <div class="ladder-lives" id="ladder-lives">❤️❤️❤️❤️❤️</div>
+
+  <div class="ladder-wrap">
+
+    <div class="ladder-goal">
+      <div class="goal-block">
+        <span class="goal-label">START</span>
+        <span class="goal-word" id="start-word">----</span>
+      </div>
+      <span class="goal-arrow">&rarr;</span>
+      <div class="goal-block">
+        <span class="goal-label">TARGET</span>
+        <span class="goal-word" id="target-word">----</span>
+      </div>
+    </div>
+
+    <div class="ladder-chain" id="ladder-chain"></div>
+
+    <form id="ladder-form" class="ladder-form" autocomplete="off">
+      <input type="text" id="ladder-input" maxlength="4" placeholder="next word" autocapitalize="off" spellcheck="false">
+      <button type="submit" class="startgame ladder-submit">Go</button>
+    </form>
+
+    <p class="ladder-message" id="ladder-message">&nbsp;</p>
+
+    <div class="ladder-controls">
+      <button type="button" class="ladder-btn" id="ladder-hint">Hint</button>
+      <button type="button" class="ladder-btn" id="ladder-new">New Puzzle</button>
+    </div>
+
+    <h3 class="scorecounter" id="ladder-solved-count">Solved: 0</h3>
+    <div class="ladder-optimal" id="ladder-optimal" style="display:none;"></div>
+
+  </div>
+
+  <footer> DSK &middot; Ladder </footer>
+
+  <script src="ladder-data.js"></script>
+  <script src="ladder.js"></script>
+</body>
+
+</html>

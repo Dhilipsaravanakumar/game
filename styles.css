@@ -1,0 +1,595 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  text-align: center;
+  background-color: #0b6dd5;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* headers section */
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.25rem, 4vw, 3rem);
+  color: #DBEDF3;
+  margin: 4vh 5% 2vh;
+  text-shadow: 5px 0 darkred;
+}
+
+/* footer section  */
+
+footer {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.9rem, 2.3vw, 1.5rem);
+  text-align: center;
+  color: #DBEDF3;
+  line-height: 1.5;
+  padding-bottom: 5vh;
+  text-shadow: 5px 0 darkred;
+  padding: 30px;
+}
+
+/* containers */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0px, 1.5vw, 18px);
+  justify-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container .row {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 25px);
+}
+
+:root {
+  --tile: clamp(90px, 22vmin, 200px);
+  --tile-border: clamp(6px, 2vmin, 10px);
+  --tile-radius: 20%;
+}
+
+.btn {
+  margin: 0;
+  display: inline-block;
+  height: var(--tile);
+  width: var(--tile);
+  border: var(--tile-border) solid black;
+  border-radius: var(--tile-radius);
+}
+
+.scorecounter {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.1rem, 3.5vw, 3rem);
+  color: #DBEDF3;
+  text-align: center;
+  text-shadow: 5px 0 darkred;
+  margin: 2vh 0;
+}
+
+.startgame {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #FEF2BF;
+  background-color: #00aa55;
+  text-shadow: 5px 0 darkred;
+  display: inline-block;
+  padding: 1.2% 2.5%;
+  margin: 2vh 2%;
+  border-radius: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+/* home page */
+
+body.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-wrapper {
+  max-width: 640px;
+  padding: 4vh 6%;
+}
+
+body.home h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.75rem, 6vw, 3.5rem);
+  color: #DBEDF3;
+  text-shadow: 5px 0 darkred;
+  margin: 0 0 1.5vh;
+}
+
+.tagline {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  color: #FEF2BF;
+  margin: 0 0 4vh;
+}
+
+.home-preview {
+  display: flex;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 16px);
+  margin-bottom: 4vh;
+}
+
+.mini-btn {
+  height: clamp(40px, 8vmin, 70px);
+  width: clamp(40px, 8vmin, 70px);
+  border: 4px solid black;
+  border-radius: 20%;
+}
+
+.mini-btn.ladder-tile {
+  background-color: #DBEDF3;
+  color: #011F3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.9rem, 3vw, 1.3rem);
+}
+
+.instructions {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.6vw, 0.9rem);
+  color: #DBEDF3;
+  line-height: 1.8;
+  margin-bottom: 4vh;
+}
+
+.home-play-btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.back-home {
+  position: absolute;
+  top: 2vh;
+  left: 4%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
+  color: #FEF2BF;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
+
+/* ladder game */
+
+body.ladder-page {
+  min-height: 100vh;
+}
+
+.ladder-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 8vh 6% 2vh;
+}
+
+.ladder-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #DBEDF3;
+  text-shadow: 5px 0 darkred;
+  margin: 0 0 1.5vh;
+}
+
+.ladder-sub {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.6vw, 0.8rem);
+  color: #DBEDF3;
+  line-height: 1.7;
+  margin-bottom: 3vh;
+}
+
+.ladder-goal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  margin-bottom: 3vh;
+}
+
+.goal-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  color: #FEF2BF;
+  margin-bottom: 1vh;
+}
+
+.goal-word {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: #DBEDF3;
+  background-color: #023059;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 10px 14px;
+  letter-spacing: 2px;
+}
+
+.goal-arrow {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  color: #FEF2BF;
+}
+
+.ladder-chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3vh;
+}
+
+.chain-word {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  color: #011F3F;
+  background-color: #DBEDF3;
+  border-radius: 8px;
+  padding: 8px 16px;
+  letter-spacing: 3px;
+}
+
+.chain-word-win {
+  background-color: #00aa55;
+  color: #FEF2BF;
+}
+
+.chain-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(100%, 220px);
+  margin: 0 auto;
+  gap: 6px;
+}
+
+.chain-letter {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.7rem, 3vw, 1.1rem);
+  color: #011F3F;
+  background-color: #DBEDF3;
+  border-radius: 6px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.chain-row-win .chain-letter {
+  background-color: #00aa55;
+  color: #FEF2BF;
+}
+
+.ladder-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 2vh;
+}
+
+#ladder-input {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px;
+  flex: 1 1 140px;
+  min-width: 0;
+  max-width: 220px;
+  border-radius: 8px;
+  border: 3px solid black;
+}
+
+.ladder-submit {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+}
+
+.ladder-message {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
+  min-height: 2.4em;
+  line-height: 1.4;
+  color: #DBEDF3;
+  margin-bottom: 2vh;
+}
+
+.ladder-message.ladder-error {
+  color: #ff8080;
+}
+
+.ladder-message.ladder-success {
+  color: #7CFC9C;
+}
+
+.ladder-lives {
+  position: fixed;
+  top: 2vh;
+  right: 4%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+  color: #ff6b6b;
+  text-align: right;
+  letter-spacing: 4px;
+  z-index: 10;
+  background-color: rgba(1, 31, 63, 0.7);
+  padding: 6px 10px;
+  border-radius: 8px;
+  max-width: 46%;
+}
+
+.ladder-lives.game-over-lives {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.ladder-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2vh;
+}
+
+.ladder-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.65rem, 2vw, 0.9rem);
+  color: #011F3F;
+  background-color: #FEF2BF;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.ladder-btn:hover {
+  opacity: 0.85;
+}
+
+.ladder-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* home page game cards */
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 32px);
+  margin-bottom: 4vh;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(200px, 30vw, 260px);
+  background-color: #023059;
+  border: 4px solid black;
+  border-radius: 16px;
+  padding: 3vh 4%;
+  text-decoration: none;
+}
+
+.game-card:hover {
+  box-shadow: 0 0 20px white;
+}
+
+.game-card-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  color: #FEF2BF;
+  margin: 0 0 2vh;
+}
+
+.game-card-desc {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.55rem, 1.4vw, 0.7rem);
+  color: #DBEDF3;
+  line-height: 1.7;
+  margin: 0 0 2vh;
+}
+
+.game-card-preview {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 2vh;
+}
+
+.ladder-optimal {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
+  color: #FEF2BF;
+  line-height: 1.8;
+  background-color: #023059;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.ladder-optimal-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #7CFC9C;
+}
+
+.ladder-optimal-path {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.ladder-optimal-word {
+  background-color: #DBEDF3;
+  color: #011F3F;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.ladder-optimal-word.optimal-win {
+  background-color: #00aa55;
+  color: #FEF2BF;
+}
+
+.ladder-optimal-arrow {
+  color: #FEF2BF;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  align-self: center;
+}
+
+/* ===== Responsive breakpoints ===== */
+
+/* Very small phones (older iPhones, small Android) */
+@media (max-width: 360px) {
+  .ladder-wrap {
+    padding: 6vh 4% 2vh;
+  }
+
+  .ladder-lives {
+    top: 1.5vh;
+    right: 3%;
+    padding: 4px 8px;
+    letter-spacing: 2px;
+  }
+
+  .back-home {
+    top: 1.5vh;
+    left: 3%;
+  }
+
+  .ladder-goal {
+    gap: 3%;
+  }
+
+  .goal-word {
+    padding: 8px 10px;
+    letter-spacing: 1px;
+  }
+
+  .chain-row {
+    width: 100%;
+    gap: 4px;
+  }
+
+  .ladder-controls {
+    gap: 8px;
+  }
+
+  .ladder-btn {
+    padding: 8px 10px;
+  }
+}
+
+/* Short viewports / landscape phones, where vh-based spacing gets cramped */
+@media (max-height: 500px) and (orientation: landscape) {
+  .ladder-wrap {
+    padding: 3vh 6% 2vh;
+  }
+
+  .ladder-lives {
+    position: absolute;
+  }
+
+  .home-wrapper {
+    padding: 2vh 6%;
+  }
+}
+
+/* Tablets and up */
+@media (min-width: 700px) {
+  .ladder-wrap {
+    max-width: 560px;
+  }
+
+  .home-wrapper {
+    max-width: 720px;
+  }
+
+  .game-card {
+    width: clamp(220px, 24vw, 280px);
+  }
+}
+
+/* Large desktop screens: cap growth so content doesn't stretch too wide/tall */
+@media (min-width: 1200px) {
+  .ladder-wrap {
+    max-width: 620px;
+    padding-top: 6vh;
+  }
+
+  .home-wrapper {
+    max-width: 800px;
+  }
+}
+
+/* Touch devices: skip hover-only affordances, ensure comfortable tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .ladder-btn,
+  .startgame,
+  .ladder-submit {
+    min-height: 44px;
+  }
+
+  #ladder-input {
+    min-height: 44px;
+  }
+}
